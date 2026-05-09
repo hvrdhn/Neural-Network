@@ -12,7 +12,7 @@ Input (784) → Hidden (128) → Hidden (64) → Output (10)
 
 | Layer | Size | Activation |
 |-------|------|------------|
-| Input | 784 (28×28 pixels) | Mone |
+| Input | 784 (28×28 pixels) | None |
 | Hidden 1 | 128 | ReLU |
 | Hidden 2 | 64 | ReLU |
 | Output | 10 (digits 0–9) | Softmax |
