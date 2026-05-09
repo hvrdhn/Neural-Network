@@ -11,7 +11,7 @@ Input (784) → Hidden (128) → Hidden (64) → Output (10)
 ```
 
 | Layer | Size | Activation |
-
+|-------|------|------------|
 | Input | 784 (28×28 pixels) | Mone |
 | Hidden 1 | 128 | ReLU |
 | Hidden 2 | 64 | ReLU |
@@ -51,7 +51,7 @@ The script will:
 ## Key Optimizations
 
 | What | Naive | Optimized |
-
+|------|-------|-----------|
 | Backprop | Python loop over each sample | Vectorized over full batch — one matrix op |
 | Evaluation | 10,000 separate `feedforward()` calls | Single matrix multiply |
 | Data storage | List of (784, 1) arrays | Pre-stacked (784, 60000) matrix |
@@ -64,7 +64,7 @@ The big-O complexity class is unchanged — the constant factor drops ~10–20x 
 ## Hyperparameters
 
 | Parameter | Value |
-
+|-----------|-------|
 | Epochs | 20 |
 | Mini-batch size | 32 |
 | Learning rate | 0.01 |
