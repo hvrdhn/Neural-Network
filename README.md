@@ -1,6 +1,6 @@
 # Neural-Network from Scratch — MNIST Classifier
 
-A fully connected neural network built from scratch using only NumPy, trained on the MNIST handwritten digit dataset. Achieves ~97% test accuracy.
+Two implementations of a fully connected neural networks built from scratch using NumPy — NN2 (PyTorch DataLoader, scalar backprop) and NN3 (NumPy, vectorized batch operations) — trained on the MNIST handwritten digit dataset. Achieves ~97% test accuracy.
 
 ---
 
@@ -54,10 +54,23 @@ The script will:
 |------|-------|-----------|
 | Backprop | Python loop over each sample | Vectorized over full batch — one matrix op |
 | Evaluation | 10,000 separate `feedforward()` calls | Single matrix multiply |
-| Data storage | List of (784, 1) arrays | Pre-stacked (784, 60000) matrix |
-| Weight update | Creates new arrays each step | In-place `-=` update |
+| Data storage | List of (784, 1) arrays | 'np.hstack()' (784, 60000) matrix |
 
 The big-O complexity class is unchanged — the constant factor drops ~10–20x because NumPy hands off to optimized BLAS (OpenBLAS/MKL) routines instead of running Python loops.
+
+---
+
+### Data storage
+ 
+Old — 60,000 scattered arrays in a Python list:
+```python
+training_data = [(image1, label1), ...]   # each image is its own (784, 1) array
+```
+ 
+New — one contiguous block of memory:
+```python
+X_train = np.hstack([...])   # shape (784, 60000) — slicing gives a free view, no copy
+```
 
 ---
 
@@ -68,8 +81,6 @@ The big-O complexity class is unchanged — the constant factor drops ~10–20x 
 | Epochs | 20 |
 | Mini-batch size | 32 |
 | Learning rate | 0.01 |
-| Weight init | He initialization (`√(2/n)`) |
-| Bias init | Small random (`0.1 × N(0,1)`) |
 
 ---
 
