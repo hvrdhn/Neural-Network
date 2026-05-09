@@ -50,7 +50,7 @@ The script will:
 
 ## Key Optimizations
 
-| What | Naive | Optimized |
+| Feature | Old | Optimized |
 |------|-------|-----------|
 | Backprop | Python loop over each sample | Vectorized over full batch — one matrix op |
 | Evaluation | 10,000 separate `feedforward()` calls | Single matrix multiply |
