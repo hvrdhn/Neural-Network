@@ -88,12 +88,11 @@ X_train = np.hstack([...])   # shape (784, 60000) — slicing gives a free view,
 
 ```
 .
-├── NN2.py              # Old implementation 
-├── NN3.py              # Optimized implementation 
-├── README.md           # This file
-├── .gitignore
-└── data/               # MNIST dataset (auto-downloaded, do not commit)
-    └── MNIST/
+├── NeuralNetwork/
+│   ├── NN2.py
+│   ├── NN3.py
+│   ├── README.md
+│   └── .gitignore
 ```
 
 ---
