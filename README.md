@@ -1,6 +1,6 @@
 # Neural-Network from Scratch — MNIST Classifier
 
-Two implementations of a fully connected neural networks built from scratch using NumPy — NN2 (PyTorch DataLoader, scalar backprop) and NN3 (NumPy, vectorized batch operations) — trained on the MNIST handwritten digit dataset. Achieves ~97% test accuracy.
+A study of two implementations of a fully connected neural networks built from scratch using NumPy — NN2 (PyTorch DataLoader, scalar backprop) and NN3 (NumPy, vectorized batch operations) — trained on the MNIST handwritten digit dataset. Achieves ~97% test accuracy.
 
 ---
 
