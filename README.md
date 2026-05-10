@@ -89,8 +89,8 @@ X_train = np.hstack([...])   # shape (784, 60000) — slicing gives a free view,
 ```
 .
 ├── NeuralNetwork/
-│   ├── NN2.py
-│   ├── NN3.py
+│   ├── NN2.py       #Old implementation
+│   ├── NN3.py       #Optimized implementation
 │   ├── README.md
 │   └── .gitignore
 ```
