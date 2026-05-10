@@ -88,9 +88,11 @@ X_train = np.hstack([...])   # shape (784, 60000) — slicing gives a free view,
 
 ```
 .
-├── NN3.py          # Main script
-├── README.md       # This file
-└── data/           # MNIST dataset (auto-downloaded)
+├── NN2.py              # Old implementation 
+├── NN3.py              # Optimized implementation 
+├── README.md           # This file
+├── .gitignore
+└── data/               # MNIST dataset (auto-downloaded, do not commit)
     └── MNIST/
 ```
 
@@ -98,4 +100,4 @@ X_train = np.hstack([...])   # shape (784, 60000) — slicing gives a free view,
 
 ## Reference
 
-Based on Michael Nielsen's *Neural Networks and Deep Learning* (neuralnetworksanddeeplearning.com), with vectorized mini-batch backprop and He weight initialization added for performance.
+Based on Michael Nielsen's *Neural Networks and Deep Learning* (neuralnetworksanddeeplearning.com).
